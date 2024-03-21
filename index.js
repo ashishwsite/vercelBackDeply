@@ -1,7 +1,10 @@
 const express=require('express')
 const app=express()
-app.use('/',(req,res)=>{
-    res.send("server is runnning")
+app.get('/',(req,res)=>{
+    res.send("server is running on deafult route")
+})
+app.use('/name',(req,res)=>{
+    res.send("server is runnning /name route")
 })
 app.listen(1000,
     console.log(`server is runnuing at http://localhost:1000`)
